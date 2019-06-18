@@ -44,11 +44,15 @@ child_process cluster to improve performance
 #### Pros
 
 - zero configuration
+- html or js entry
 - fast
+- auto install packages
+- built-in code splitting & HMR
 
 #### Cons
 
 - limited support configuration
+- first built is slow
 
 ### Webpack
 
@@ -60,3 +64,4 @@ child_process cluster to improve performance
 #### Cons
 
 - complicated configuration
+- multicore, code-splitting, loaders need configuration
