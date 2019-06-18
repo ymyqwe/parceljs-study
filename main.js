@@ -23,8 +23,8 @@ function useInterval(callback, delay) {
   }, [delay]);
 }
 
-const main = () => {
-  const [count, setCount] = useState(0);
+const Main = () => {
+  const [count, setCount] = useState(1000);
 
   useInterval(() => {
     setCount(count + 1);
@@ -35,9 +35,9 @@ const main = () => {
     <div id="timeInterval">
       <div>{count}</div>
       <div>
-        <Button onClick={() => setCount(0)}>{join(['Reset', 'Count'], ',')}</Button>
+        <Button onClick={() => setCount(0)}>{join(['Reset', 'Count', 'Now', '!'], ' ')}</Button>
       </div>
     </div>
   );
 };
-module.exports = main;
+export default Main;
