@@ -28,3 +28,36 @@ event returned to main thread
 I/O intensive rather than CPU intensive
 
 child_process cluster to improve performance
+
+### Comparison
+
+| Project  | Parcel | Webpack |
+| -------- | ------ | ------- |
+| prod     |        |         |
+| dev      |        |         |
+| HMR      |        |         |
+| JS Size  |        |         |
+| CSS Size |        |         |
+
+### Parcel
+
+#### Pros
+
+- zero configuration
+- fast
+
+#### Cons
+
+- only browser project
+- limited support configuration
+
+### Webpack
+
+#### Pros
+
+- Nodejs, Electron, Npm package support
+- flexible configuration
+
+#### Cons
+
+- complicated configuration
