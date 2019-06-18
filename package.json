@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "parcel:dev": "parcel index.html",
-    "parcel:build": "NODE_ENV=production parcel build index.html --public-url ./",
+    "parcel:build": "NODE_ENV=production parcel build index.html --public-url ./ --no-source-maps",
     "webpack:dev": "webpack-dev-server",
     "webpack:build": "NODE_ENV=production webpack -p"
   },

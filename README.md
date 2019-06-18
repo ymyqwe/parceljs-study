@@ -31,13 +31,13 @@ child_process cluster to improve performance
 
 ### Comparison
 
-| Project  | Parcel                   | Webpack |
-| -------- | ------------------------ | ------- |
-| prod     | 22.75s(with cache 1.97s) | 10.7s   |
-| dev      | 19.42s(with cache 3.83s) | 4.67s   |
-| HMR      | 1.32s                    | 1.19s   |
-| JS Size  | 1.1M                     | 837K    |
-| CSS Size | 54K                      | 39K     |
+| Project  | Parcel                    | Webpack |
+| -------- | ------------------------- | ------- |
+| prod     | 22.75s(with cache 0.975s) | 10.7s   |
+| dev      | 19.42s(with cache 3.83s)  | 4.67s   |
+| HMR      | 1.32s                     | 1.19s   |
+| JS Size  | 1.1M                      | 837K    |
+| CSS Size | 54K                       | 39K     |
 
 ### Parcel
 
