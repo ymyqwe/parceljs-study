@@ -48,15 +48,14 @@ child_process cluster to improve performance
 
 #### Cons
 
-- only browser project
 - limited support configuration
 
 ### Webpack
 
 #### Pros
 
-- Nodejs, Electron, Npm package support
 - flexible configuration
+  — user defined project directories
 
 #### Cons
 
