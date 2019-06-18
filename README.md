@@ -2,13 +2,21 @@
 
 demos and studies about parcel.js
 
-# nodejs single thread I/O
+## What is Parcel.js
+
+- worker processes to enable multicore compilation
+- plugin-free bundler for JS, CSS, HTML, file assets
+- automatic code transformation using Babel, PostCSS, and PostHTML
+- zero config code splitting
+- hot module replacement
+
+## nodejs single thread I/O
 
 - <i>libuv</i> event-driven asynchronous I/O library
 
 default 4 thread pools
 
-## view threads on macOS
+### view threads on macOS
 
 1. Terminal
 
@@ -29,7 +37,57 @@ I/O intensive rather than CPU intensive
 
 child_process cluster to improve performance
 
-### Comparison
+## Parcel composition
+
+<img src="images/parcel-composition.png">
+
+## Parcel process
+
+### Bundler.start()
+
+1. plugins - localRequire, buildQueue
+2. watcher(optional)
+3. HMR(optional)
+
+### Asset
+
+- loadIfNeeded
+- pretransform js: babel
+- getDependencies，　 html: posthtml-parser, js: babylon.parse, collectDependencies
+- transform, AST, update, delete node
+- generate, [this.type]: this.contents
+- generateHash
+
+### Bundler.resolveAsset
+
+asset.depAssets => Asset tree
+
+### Bundle class
+
+one bundle one file
+
+#### properties
+
+- assets
+- childBundle
+
+### Package
+
+generate bundleHashes for all Assets
+
+- start - write js, css, etc into files
+- addAsset - require relationship and modules id
+- end - HMR, sourceMap
+
+### Worker
+
+using node.js child_process to make multicore work
+
+- WorkerFarm - manipulating child processes
+- Worker - managing one process
+- Child - executing task in process
+
+## Comparison between Parcel and Webpack
 
 | Project  | Parcel                    | Webpack |
 | -------- | ------------------------- | ------- |
